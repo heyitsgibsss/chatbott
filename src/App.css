@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -13,8 +17,35 @@
   }
 }
 
+/* contact jsx */ 
+
+.grid-container-contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-contact {
+  background-color: #3a3737;
+  border: none;
+  border-radius: 1px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-photo {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  color: #fff;
+  font-size: 14px;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #535050;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,6 +54,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
@@ -34,5 +66,323 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.App {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;;
+  background-color: #3a3737;
+  border: none;
+}
+
+.containerbot {
+  padding: 10px;
+  margin: 10px 110px;
+  flex-direction: column;
+}
+
+.containerbot::after {
+  content:"";
+  clear: both;
+  display: table;
+}
+
+.containerbot img {
+  float: left;
+  max-width: 35px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 70%;
+}
+
+.containerbot img.right {
+  float: right;
+  margin-left: 10px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right; 
+  color: #aaa;
+}
+
+.time-left {
+  float: left; 
+  color: #999;
+}
+
+.form-control {
+  background-color:#3a3737; 
+  height: 50px;
+  border-color: #535050;
+  color: #ffffff; 
+}
+
+.form-control:hover {
+  background-color:#3a3737;
+  outline: none;
+  color: #ffffff; 
+} 
+
+.form-control:focus {
+  background-color:#3a3737;
+  color: #ffffff; 
+  border-color: #535050;
+  outline: none;
+  box-shadow: none;
+} 
+
+
+.btn {
+  background-color: #3a3737;
+  border-color: #535050;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.btn:hover { 
+  background-color: #535050;
+  border: none;
+  outline-style: none;
+  border-color: #535050;
+}
+
+.btn:focus { 
+  background-color: #535050; 
+  border-color: #535050;
+  outline: none;
+  border: none; 
+}
+
+.card-footer { 
+  height: 10vh;
+}
+
+.input-group-append {
+  margin-left: -5px;
+}
+
+.card-footer p { 
+  color: rgba(255, 255, 255, 0.5); 
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.card {
+  background-color: #3a3737;
+  border: none;
+  border-radius: 1px;
+}
+
+.card-header {
+  border: none;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  max-height: 300px;
+  padding-top: 25px;
+}
+
+.card-header.toogle {
+  position: fixed;
+  width: calc(100% - 140px);
+  transition: width 0.3s ease;
+}
+
+.card-footer {
+  border: none;
+  background-color: #3a3737;
+  margin-bottom: 30px;
+}
+
+.sticky-header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(1px); 
+  z-index: 0;
+}
+
+.card-header p { 
+  color: #999; 
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.row {
+  text-align: left;
+  color: #fff;
+}
+
+.input-group {
+  max-width: 900px;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+#content-chat-feed::-webkit-scrollbar {
+  width: 6px;
+}
+
+#content-chat-feed::-webkit-scrollbar-thumb {
+  background-color: #383e43; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Set the border-radius of the scrollbar thumb */
+}
+
+#content-chat-feed::-webkit-scrollbar-track {
+  background-color: #3a3737; /* Set the color of the scrollbar track */
+}
+
+/* Hide the scrollbar on Firefox */
+#content-chat-feed {
+  scrollbar-width: thin;
+  scrollbar-color: #6c757d #f5f5f5;
+}
+
+@media only screen and (max-width: 1200px) {
+  .input-group {
+    margin-left: 10px;
+  }
+}
+
+.sidebar .toggle .text-2xl.open {
+  transform: rotate(180deg);
+  position: absolute;
+  right: -15px;
+  top: 50%; 
+  transition: transform 0.8s ease;
+}
+
+.toggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+}
+
+
+.sidebar button:hover {
+  background-color: rgb(24, 24, 24);
+  width: 20px;
+}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.sidebar.open { 
+  width: 95%;
+  background-color: rgba(0, 0, 0, 0.403);
+  transition: width 0.9ms ease;  
+}
+
+.sidebar-content { 
+  margin-bottom: 50px;
+  margin-left: 5px;
+}
+
+.item a  {
+  text-decoration: none;
+}
+
+.font { 
+  color: rgba(255, 255, 255, 0.5); 
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px; /* Tambahkan margin-bottom jika diperlukan */
+}
+
+.style { 
+  border-radius: 1px;
+  border: none;
+  margin-bottom: 40px;
+  width: 200px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  margin-left: 12px;
+  font-size: 0.9em;
+  font-family: "Lato", sans-serif;
+}
+
+.logo {
+  width: 110px; 
+  height: 100px; 
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.top-sidebar {
+  text-align: center;
+  padding: 20px; 
+}
+
+ul { 
+  list-style-type: none;
+}
+
+.margin { 
+  margin-top: 100px;
+}
+
+#content-chat-feed::-webkit-scrollbar {
+  width: 6px;
+}
+
+#content-chat-feed::-webkit-scrollbar-thumb {
+  background-color: #383e43; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Set the border-radius of the scrollbar thumb */
+}
+
+#content-chat-feed::-webkit-scrollbar-track {
+  background-color: #3a3737; /* Set the color of the scrollbar track */
+}
+
+/* Hide the scrollbar on Firefox */
+#content-chat-feed {
+  scrollbar-width: thin;
+  scrollbar-color: #6c757d #f5f5f5;
+}
+
+@media (max-width: 1500px) {
+  .sidebar {
+    margin-bottom: 100px;
+    transition: width 1s ease;
+    width: 60px;
+  }
+
+  .sidebar.closed button {
+    float: left;
+  }
+
+  .sidebar.open button {
+    float: right;
+  }
+}
+
+@media (max-height: 1500px) {
+  .sidebar {
+    max-height: 100%;
+    height: 100%;
   }
 }
